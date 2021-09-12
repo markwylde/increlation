@@ -17,5 +17,13 @@
   "keywords": [
     "incrementor",
     "correllation-id"
-  ]
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/markwylde/increlation.git"
+  },
+  "bugs": {
+    "url": "https://github.com/markwylde/increlation/issues"
+  },
+  "homepage": "https://github.com/markwylde/increlation#readme"
 }
