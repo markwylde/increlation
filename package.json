@@ -1,6 +1,6 @@
 {
   "name": "increlation",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "An incremenentor that is limited to a minimum and maximum value, but allows reusing a value once resolved.",
   "main": "index.js",
   "scripts": {
