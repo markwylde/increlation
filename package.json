@@ -1,0 +1,21 @@
+{
+  "name": "increlation",
+  "version": "1.0.0",
+  "description": "An incremenentor that is limited to a minimum and maximum value, but allows reusing a value once resolved.",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test"
+  },
+  "author": "Mark Wylde <me@markwylde.com> (https://github.com/markwylde)",
+  "license": "MIT",
+  "devDependencies": {
+    "basictap": "^2.2.1"
+  },
+  "directories": {
+    "test": "test"
+  },
+  "keywords": [
+    "incrementor",
+    "correllation-id"
+  ]
+}
