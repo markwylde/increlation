@@ -4,19 +4,21 @@
   "description": "An incremenentor that is limited to a minimum and maximum value, but allows reusing a value once resolved.",
   "main": "index.js",
   "scripts": {
-    "test": "node test"
+    "test": "c8 node test"
   },
   "author": "Mark Wylde <me@markwylde.com> (https://github.com/markwylde)",
   "license": "MIT",
   "devDependencies": {
-    "basictap": "^2.2.1"
+    "basictap": "^2.2.1",
+    "c8": "^7.9.0"
   },
   "directories": {
     "test": "test"
   },
   "keywords": [
     "incrementor",
-    "correllation-id"
+    "correllation-id",
+    "iterator"
   ],
   "repository": {
     "type": "git",

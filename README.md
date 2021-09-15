@@ -7,25 +7,33 @@ npm install --save increlation
 ```
 
 ## Usage
+### Sync
 ```javascript
 const increlation = require('increlation');
 
-const incrementor = increlation(1, 10);
+const incrementor = increlation.sync(1, 10);
 
-incrementor.next() // === 1
-incrementor.next() // === 2
+incrementor.next() // === { done: false, value: 1 }
+incrementor.next() // === { done: false, value: 2 }
 ///...
-incrementor.next() // === 10
+incrementor.next() // === { done: false, value: 10 }
 incrementor.release(5)
-incrementor.next() // === 5
-incrementor.next()
-  /* === throw new Error(
-    'increlation: incrementor has used all available values'
-  )*/
-incrementor.waitForNext().then(
-  value => {
-    console.log('value is 5 after the release line below runs')
-  }
-)
+incrementor.next() // === { done: false, value: 5 }
+incrementor.next() // === { done: true, value: null }
+```
+
+### Ayync
+```javascript
+const increlation = require('increlation');
+
+const incrementor = increlation.sync(1, 10);
+
+await incrementor.next() // === { done: false, value: 1 }
+await incrementor.next() // === { done: false, value: 2 }
+///...
+await incrementor.next() // === { done: false, value: 10 }
+incrementor.next().then(result => {
+  result // === { done: false, value: 5 }
+})
 incrementor.release(5)
 ```
